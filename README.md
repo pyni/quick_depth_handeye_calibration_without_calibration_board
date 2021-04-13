@@ -12,3 +12,6 @@ And move point cloud on the model,like this:
 Although it is simple, the final test precision is higher than traditional calibration methods:
  ![image](https://github.com/pyni/quick_depth_handeye_calibration/blob/main/img/Screenshot%20from%202021-04-08%2016-07-57.png) 
 
+
+If anyone wants to change the initial pose, you can change it over here:
+
