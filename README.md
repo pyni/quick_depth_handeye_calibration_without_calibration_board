@@ -21,6 +21,4 @@ If anyone wants to change the initial pose, you can change it over here:
 
 本项目可以自由添加多个需要调节的link，只需要在roslaunch里面增加相应的node即可，但ns命名需要不一样，比如这个：
  
-  ![image](https://github.com/pyni/quick_depth_handeye_calibration_without_calibration_board/blob/main/img/Screenshot%20from%202021-04-14%2020-59-26.png) 
-
- 
+   ![image]( https://github.com/pyni/quick_depth_handeye_calibration_without_calibration_board/blob/main/img/Screenshot%20from%202021-04-14%2021-00-52.png) 
