@@ -22,7 +22,7 @@ If anyone wants to change the initial pose, you can change it over here:
 本项目可以自由添加多个需要调节的link，只需要在roslaunch里面增加相应的node即可，但ns命名需要不一样，比如这个：
 
 
-  <node name="itf" pkg="rviz_interactive_tf" type="interactive_tf" ns="itf2">
-    <param name="parent_frame" value="/ee_link"/>
-    <param name="frame" value="/camera_link2"/>
-  </node>
+   node name="itf" pkg="rviz_interactive_tf" type="interactive_tf" ns="itf2">
+     param name="parent_frame" value="/ee_link"/>
+     param name="frame" value="/camera_link2"/>
+   node 
