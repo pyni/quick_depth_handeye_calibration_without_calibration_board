@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="itf" pkg="rviz_interactive_tf" type="interactive_tf" ns="itf1">
+    <param name="parent_frame" value="/camera_link"/>
+    <param name="frame" value="/tmp_frame"/>
+  </node>
+  <!-- when these are chained together, the marker controls don't
+      appear unless I switch rviz to the tf1 frame, then move tf2,
+      then I can go back to the map frame and see tf2 markers --> 
+ 
+
+  <node name="rviz" pkg="rviz" type="rviz"
+      args="-d $(find rviz_interactive_tf)/config/interactive_tf.rviz"/>
+</launch>
