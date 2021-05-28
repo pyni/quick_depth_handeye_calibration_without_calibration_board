@@ -30,4 +30,6 @@ The method above
 
 第三类方法（通过gazebo进行点云建模，然后再进行icp标定）：
 gazebo建模方法（这里用的是iiwa的，本质就是搭建几个gazebo的kinect拼接即可）gazebo的环境导出来可以来替换calibration.world
+注意，如果是多相机的化这里的calibration.world里面的frameName和pointCloudTopicName等等都需要换个名字
+还有一个需要注意的是，gazebo建模里面，也就是world里面相机的link并不会发布，所以，这里需要额外发布link：
 
