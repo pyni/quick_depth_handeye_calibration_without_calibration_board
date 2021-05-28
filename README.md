@@ -26,3 +26,8 @@ If anyone wants to change the initial pose, you can change it over here:
 
 Improvement:
 The method above 
+
+
+第三类方法（通过gazebo进行点云建模，然后再进行icp标定）：
+gazebo建模方法（这里用的是iiwa的，本质就是搭建几个gazebo的kinect拼接即可
+
