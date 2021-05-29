@@ -1,0 +1,455 @@
+   <model name='kinect_ros'>
+      <pose frame=''>-1.4249 0.087483 0.036 0 -0 0</pose>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.073 0.276 0.072</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://kinect/meshes/kinect.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='camera' type='depth'>
+          <update_rate>20</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>1.0472</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>3</far>
+            </clip>
+          </camera>
+          <plugin name='camera_plugin' filename='libgazebo_ros_openni_kinect.so'>
+            <baseline>0.2</baseline>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>0.0</updateRate>
+            <cameraName>camera_ir</cameraName>
+            <imageTopicName>/camera/color/image_raw</imageTopicName>
+            <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+            <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+            <pointCloudTopicName>/camera/depth/points1</pointCloudTopicName>
+            <frameName>camera_link_1</frameName>
+            <pointCloudCutoff>0.5</pointCloudCutoff>
+            <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+            <distortionK1>0</distortionK1>
+            <distortionK2>0</distortionK2>
+            <distortionK3>0</distortionK3>
+            <distortionT1>0</distortionT1>
+            <distortionT2>0</distortionT2>
+            <CxPrime>0</CxPrime>
+            <Cx>0</Cx>
+            <Cy>0</Cy>
+            <focalLength>0</focalLength>
+            <hackBaseline>0</hackBaseline>
+          </plugin>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <state world_name='default'>
+      <sim_time>914 830000000</sim_time>
+      <real_time>300 723467403</real_time>
+      <wall_time>1622204681 504804087</wall_time>
+      <iterations>30050</iterations>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='iiwa'>
+        <pose frame=''>0 0 0 -0 -2e-06 1e-06</pose>
+        <scale>1 1 1</scale>
+        <link name='iiwa_link_0'>
+          <pose frame=''>0 0 0 -0 -2e-06 1e-06</pose>
+          <velocity>0 0 3e-06 2.1e-05 -1.1e-05 -3e-06</velocity>
+          <acceleration>-0.000141 -0.000191 0.000331 0.004205 -0.002296 -0.000536</acceleration>
+          <wrench>-0.000705 -0.000957 0.001657 0 -0 0</wrench>
+        </link>
+        <link name='iiwa_link_1'>
+          <pose frame=''>0.00013 6.5e-05 0.149863 2e-06 0.000761 -0.000399</pose>
+          <velocity>0 0 3e-06 1.9e-05 -1.1e-05 0.001353</velocity>
+          <acceleration>-0.000184 -0.000387 0.00055 0.003304 -0.002246 0.000333</acceleration>
+          <wrench>-0.000637 -0.001335 0.001899 0 -0 0</wrench>
+        </link>
+        <link name='iiwa_link_2'>
+          <pose frame=''>0.00029 1.7e-05 0.339754 1.57095 -0.000973 3.14116</pose>
+          <velocity>-1e-06 -2e-06 3e-06 1.3e-05 0.012689 0.001351</velocity>
+          <acceleration>-0.000238 -0.00051 0.000549 2.65899 1.25357 -3.11609</acceleration>
+          <wrench>-0.000828 -0.001775 0.001911 0 -0 0</wrench>
+        </link>
+        <link name='iiwa_link_3'>
+          <pose frame=''>0.000547 -8e-06 0.549642 0.000938 0.001028 0.000261</pose>
+          <velocity>0.002663 -3e-06 -1e-06 4e-06 0.012695 0.001331</velocity>
+          <acceleration>-0.000104 -0.000376 0.000453 -0.000635 0.000642 0.000416</acceleration>
+          <wrench>-0.00042 -0.001525 0.001835 0 -0 0</wrench>
+        </link>
+        <link name='iiwa_link_4'>
+          <pose frame=''>0.00074 -0.000198 0.739538 1.57239 0.001385 0.000241</pose>
+          <velocity>0.005074 -4e-06 -3e-06 4e-06 0.011492 0.001329</velocity>
+          <acceleration>-1.4e-05 -0.000248 0.000468 -0.00059 -0.168874 0.051651</acceleration>
+          <wrench>-4.8e-05 -0.000864 0.001629 0 -0 0</wrench>
+        </link>
+        <link name='iiwa_link_5'>
+          <pose frame=''>0.001019 -0.000572 0.949446 -0.00176 -0.001271 -3.14121</pose>
+          <velocity>0.007487 -4e-06 -6e-06 3e-06 0.01149 0.001503</velocity>
+          <acceleration>2.9e-05 -7.3e-05 0.000423 -0.000977 0.124256 -0.119451</acceleration>
+          <wrench>6.3e-05 -0.000158 0.000915 0 -0 0</wrench>
+        </link>
+        <link name='iiwa_link_6'>
+          <pose frame=''>0.001277 -0.061626 1.13923 1.56885 -0.001115 -3.1412</pose>
+          <velocity>0.009759 -4e-06 -1e-05 4e-06 0.010502 0.001502</velocity>
+          <acceleration>4.4e-05 1.8e-05 0.000411 -0.000585 -0.042052 0.000466</acceleration>
+          <wrench>0.000104 4.2e-05 0.000965 0 -0 0</wrench>
+        </link>
+        <link name='iiwa_link_7'>
+          <pose frame=''>0.001343 -0.001097 1.22024 0.001173 0.001106 0.000838</pose>
+          <velocity>0.010519 -4e-06 -1e-05 4e-06 0.010501 0.001483</velocity>
+          <acceleration>-1.5e-05 7.1e-05 0.000341 -0.000665 -0.000294 0.000522</acceleration>
+          <wrench>-4.8e-05 0.000221 0.001066 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='kinect_ros'>
+        <pose frame=''>-1.32177 0.018559 0.769588 -6e-06 -7e-06 -4.7e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-1.32177 0.018559 0.769588 -6e-06 -7e-06 -4.7e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='kinect_ros_2'>
+        <pose frame=''>-0.031187 -1.39187 0.769583 -7e-06 6e-06 1.57075</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.031187 -1.39187 0.769583 -7e-06 6e-06 1.57075</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='kinect_ros_3'>
+        <pose frame=''>1.59213 0.025714 0.769587 6e-06 7e-06 3.14155</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>1.59213 0.025714 0.769587 6e-06 7e-06 3.14155</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='kinect_ros_4'>
+        <pose frame=''>-0.042774 1.27131 0.769583 7e-06 -6e-06 -1.57084</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>-0.042774 1.27131 0.769583 7e-06 -6e-06 -1.57084</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='kinect_ros_2'>
+      <pose frame=''>0.47407 -1.39189 0.769587 -6e-06 -7e-06 -4.7e-05</pose>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.073 0.276 0.072</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://kinect/meshes/kinect.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='camera' type='depth'>
+          <update_rate>20</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>1.0472</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>3</far>
+            </clip>
+          </camera>
+          <plugin name='camera_plugin' filename='libgazebo_ros_openni_kinect.so'>
+            <baseline>0.2</baseline>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>0.0</updateRate>
+            <cameraName>camera_ir</cameraName>
+            <imageTopicName>/camera/color/image_raw</imageTopicName>
+            <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+            <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+            <pointCloudTopicName>/camera/depth/points2</pointCloudTopicName>
+            <frameName>camera_link_2</frameName>
+            <pointCloudCutoff>0.5</pointCloudCutoff>
+            <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+            <distortionK1>0</distortionK1>
+            <distortionK2>0</distortionK2>
+            <distortionK3>0</distortionK3>
+            <distortionT1>0</distortionT1>
+            <distortionT2>0</distortionT2>
+            <CxPrime>0</CxPrime>
+            <Cx>0</Cx>
+            <Cy>0</Cy>
+            <focalLength>0</focalLength>
+            <hackBaseline>0</hackBaseline>
+          </plugin>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='kinect_ros_3'>
+      <pose frame=''>1.59213 -0.057662 0.769587 -6e-06 -7e-06 -4.7e-05</pose>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.073 0.276 0.072</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://kinect/meshes/kinect.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='camera' type='depth'>
+          <update_rate>20</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>1.0472</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>3</far>
+            </clip>
+          </camera>
+          <plugin name='camera_plugin' filename='libgazebo_ros_openni_kinect.so'>
+            <baseline>0.2</baseline>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>0.0</updateRate>
+            <cameraName>camera_ir</cameraName>
+            <imageTopicName>/camera/color/image_raw</imageTopicName>
+            <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+            <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+            <pointCloudTopicName>/camera/depth/points3</pointCloudTopicName>
+            <frameName>camera_link_3</frameName>
+            <pointCloudCutoff>0.5</pointCloudCutoff>
+            <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+            <distortionK1>0</distortionK1>
+            <distortionK2>0</distortionK2>
+            <distortionK3>0</distortionK3>
+            <distortionT1>0</distortionT1>
+            <distortionT2>0</distortionT2>
+            <CxPrime>0</CxPrime>
+            <Cx>0</Cx>
+            <Cy>0</Cy>
+            <focalLength>0</focalLength>
+            <hackBaseline>0</hackBaseline>
+          </plugin>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+    <model name='kinect_ros_4'>
+      <pose frame=''>-0.042774 1.27131 0.769583 -7e-06 6e-06 1.57075</pose>
+      <link name='link'>
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.073 0.276 0.072</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://kinect/meshes/kinect.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <sensor name='camera' type='depth'>
+          <update_rate>20</update_rate>
+          <camera name='__default__'>
+            <horizontal_fov>1.0472</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>3</far>
+            </clip>
+          </camera>
+          <plugin name='camera_plugin' filename='libgazebo_ros_openni_kinect.so'>
+            <baseline>0.2</baseline>
+            <alwaysOn>1</alwaysOn>
+            <updateRate>0.0</updateRate>
+            <cameraName>camera_ir</cameraName>
+            <imageTopicName>/camera/color/image_raw</imageTopicName>
+            <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+            <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+            <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+            <pointCloudTopicName>/camera/depth/points4</pointCloudTopicName>
+            <frameName>camera_link_4</frameName>
+            <pointCloudCutoff>0.5</pointCloudCutoff>
+            <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+            <distortionK1>0</distortionK1>
+            <distortionK2>0</distortionK2>
+            <distortionK3>0</distortionK3>
+            <distortionT1>0</distortionT1>
+            <distortionT2>0</distortionT2>
+            <CxPrime>0</CxPrime>
+            <Cx>0</Cx>
+            <Cy>0</Cy>
+            <focalLength>0</focalLength>
+            <hackBaseline>0</hackBaseline>
+          </plugin>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
