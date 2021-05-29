@@ -30,6 +30,7 @@ The method above
 
 第三类方法（通过gazebo进行点云建模，然后再进行icp标定）：
 gazebo建模方法（这里用的是iiwa的，本质就是搭建几个gazebo的kinect拼接即可）gazebo的环境导出来可以来替换calibration.world
-注意，如果是多相机的化这里的calibration.world里面的frameName和pointCloudTopicName等等都需要换个名字
-还有一个需要注意的是，gazebo建模里面，也就是world里面相机的link并不会发布，所以，这里需要额外发布link：
+注意，如果是多相机的化这里的calibration.world里面的frameName和pointCloudTopicName等等都需要换个名字。具体而言，我们这边其实把world这部分提供在这里了，也就是added.world，对于任意机器人，只要在其本身的world里面把我们这个added.world加进去就行：
+![Screenshot from 2021-05-28 21-03-14](https://user-images.githubusercontent.com/18031767/120055094-778f2880-c066-11eb-93e6-b1b6ddb8037c.png)
+还有一个需要注意的是，gazebo建模里面，也就是world里面相机的link并不会发布，所以，这里需要额外发布link。所以，我们这边写了一个程序，专门将这些点云进行发布，同时进行拼接
 
