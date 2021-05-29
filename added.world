@@ -1,4 +1,4 @@
-  <model name='kinect_ros'>
+    <model name='kinect_ros'>
       <pose frame=''>-1.4249 0.087483 0.036 0 -0 0</pose>
       <link name='link'>
         <inertial>
@@ -85,10 +85,10 @@
       <static>1</static>
     </model>
     <state world_name='default'>
-      <sim_time>14942 560000000</sim_time>
-      <real_time>14031 71738609</real_time>
-      <wall_time>1622270851 763050409</wall_time>
-      <iterations>1402773</iterations>
+      <sim_time>15565 660000000</sim_time>
+      <real_time>623 441714285</real_time>
+      <wall_time>1622271993 550581144</wall_time>
+      <iterations>62310</iterations>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -104,58 +104,58 @@
         <scale>1 1 1</scale>
         <link name='iiwa_link_0'>
           <pose frame=''>0 0 0 -0 -2e-06 1e-06</pose>
-          <velocity>-0 -0 -3e-06 -2.1e-05 1.1e-05 3e-06</velocity>
-          <acceleration>0.000141 0.000191 -0.000331 -0.004205 0.002296 0.000536</acceleration>
-          <wrench>0.000705 0.000957 -0.001657 0 -0 0</wrench>
+          <velocity>0 0 3e-06 2.1e-05 -1.1e-05 -3e-06</velocity>
+          <acceleration>-0.000141 -0.000191 0.000331 0.004204 -0.002296 -0.000536</acceleration>
+          <wrench>-0.000705 -0.000957 0.001656 0 -0 0</wrench>
         </link>
         <link name='iiwa_link_1'>
-          <pose frame=''>-0.000173 0.000179 0.14986 0.00108 -0.000445 2.20237</pose>
-          <velocity>1e-06 -1e-06 -2e-06 -2e-05 -0 0.000562</velocity>
-          <acceleration>0.000293 0.000355 -0.000573 0.511975 1.32248 1.65795</acceleration>
-          <wrench>0.001013 0.001227 -0.001979 0 -0 0</wrench>
+          <pose frame=''>-0.003192 0.000328 0.149806 -3.7e-05 -0.002076 -0.081711</pose>
+          <velocity>-0 0 3e-06 1.6e-05 -7e-06 0.001034</velocity>
+          <acceleration>-0.000223 -0.000397 0.000576 1.99973 0.341222 0.115252</acceleration>
+          <wrench>-0.000768 -0.001372 0.00199 0 -0 0</wrench>
         </link>
         <link name='iiwa_link_2'>
-          <pose frame=''>4.4e-05 0.000308 0.339725 1.56977 -0.090437 -0.939152</pose>
-          <velocity>1e-06 2e-06 -2e-06 -0.0277 -0.020258 0.000598</velocity>
-          <acceleration>0.00026 0.00051 -0.000464 -0.071779 0.884986 -2.73612</acceleration>
-          <wrench>0.000905 0.001775 -0.001617 0 -0 0</wrench>
+          <pose frame=''>-0.005045 0.000167 0.339533 1.57526 0.216274 3.05983</pose>
+          <velocity>-1.6e-05 -2e-06 7.4e-05 -0.041171 -0.496581 0.003202</velocity>
+          <acceleration>-0.000188 -0.000515 0.00062 -0.31836 0.025951 2.94493</acceleration>
+          <wrench>-0.000656 -0.001793 0.002159 0 -0 0</wrench>
         </link>
         <link name='iiwa_link_3'>
-          <pose frame=''>-0.010932 0.015783 0.548729 -0.038399 0.082673 1.74581</pose>
-          <velocity>-0.004243 0.005784 -0.000651 -0.027785 -0.020126 0.002399</velocity>
-          <acceleration>0.000109 0.000247 -0.000432 -0.522427 -0.08625 -0.176343</acceleration>
-          <wrench>0.000444 0.001001 -0.001753 0 -0 0</wrench>
+          <pose frame=''>-0.052023 0.004765 0.543876 -0.011961 -0.239582 -0.026441</pose>
+          <velocity>-0.101585 0.008268 -0.023105 -0.038937 -0.49675 -0.006096</velocity>
+          <acceleration>-0.00018 -0.00033 0.00055 1.16191 0.238255 -0.136443</acceleration>
+          <wrench>-0.000731 -0.001339 0.00223 0 -0 0</wrench>
         </link>
         <link name='iiwa_link_4'>
-          <pose frame=''>-0.020851 0.029939 0.737846 1.53285 -0.05913 1.75112</pose>
-          <velocity>-0.008083 0.011014 -0.001243 -0.024202 -0.019482 0.002537</velocity>
-          <acceleration>4.8e-05 0.000115 -0.000363 0.468499 0.071315 0.124716</acceleration>
-          <wrench>0.000166 0.000401 -0.001263 0 -0 0</wrench>
+          <pose frame=''>-0.096673 0.008225 0.727423 -1.55463 -1.02774 3.09999</pose>
+          <velocity>-0.19293 0.015698 -0.045453 -0.046931 -0.785142 -0.003723</velocity>
+          <acceleration>-0.000184 -0.000194 0.000461 3.04473 0.823196 -1.00944</acceleration>
+          <wrench>-0.000639 -0.000676 0.001604 0 -0 0</wrench>
         </link>
         <link name='iiwa_link_5'>
-          <pose frame=''>-0.026454 0.016306 0.947233 0.045309 0.054298 -1.26529</pose>
-          <velocity>-0.012127 0.016068 -0.001021 -0.024243 -0.019573 0.003957</velocity>
-          <acceleration>-2.5e-05 -3.3e-05 -0.00036 -1.41723 -0.206899 -0.770334</acceleration>
-          <wrench>-5.5e-05 -7.2e-05 -0.00078 0 -0 0</wrench>
+          <pose frame=''>-0.276302 0.012324 0.617293 3.11659 1.01364 -0.051981</pose>
+          <velocity>-0.107023 0.011248 -0.187034 -0.08572 -0.784268 -0.027672</velocity>
+          <acceleration>-4.1e-05 -2.1e-05 0.000171 0.382006 1.14305 2.16039</acceleration>
+          <wrench>-8.9e-05 -4.6e-05 0.000371 0 -0 0</wrench>
         </link>
         <link name='iiwa_link_6'>
-          <pose frame=''>0.026318 0.021991 1.1394 1.61613 -0.002779 -1.2678</pose>
-          <velocity>-0.015911 0.020936 -0.000125 -0.017546 -0.017478 0.004275</velocity>
-          <acceleration>-3.1e-05 -7.1e-05 -0.000317 0.325075 0.094973 0.070792</acceleration>
-          <wrench>-7.3e-05 -0.000167 -0.000745 0 -0 0</wrench>
+          <pose frame=''>-0.439412 -0.044708 0.516939 -1.58996 -0.686656 -0.019848</pose>
+          <velocity>-0.030184 0.007197 -0.310251 -0.088613 -0.875183 -0.026352</velocity>
+          <acceleration>1.3e-05 5.9e-05 -1.6e-05 -2.7543 1.08992 2.5606</acceleration>
+          <wrench>3.1e-05 0.000139 -3.7e-05 0 -0 0</wrench>
         </link>
         <link name='iiwa_link_7'>
-          <pose frame=''>-0.035124 0.003004 1.21744 -0.014821 0.043997 3.06181</pose>
-          <velocity>-0.017194 0.022042 -0.000865 -0.017566 -0.01748 0.00467</velocity>
-          <acceleration>-1.6e-05 -1.2e-05 -0.000262 -0.003232 -0.000113 0.000381</acceleration>
-          <wrench>-4.9e-05 -3.7e-05 -0.000819 0 -0 0</wrench>
+          <pose frame=''>-0.386133 0.013385 0.453109 -3.10686 0.684272 -3.13844</pose>
+          <velocity>0.027438 0.000121 -0.269083 -0.100533 -0.874567 -0.011609</velocity>
+          <acceleration>0.000138 -3.9e-05 -1.8e-05 1.81294 0.088549 -2.97246</acceleration>
+          <wrench>0.000433 -0.000121 -5.5e-05 0 -0 0</wrench>
         </link>
       </model>
       <model name='kinect_ros'>
-        <pose frame=''>-1.92625 -1.03646 0.472357 -6e-06 -7e-06 -4.7e-05</pose>
+        <pose frame=''>-1.9262 -0.003806 0.472351 -6e-06 -7e-06 -4.7e-05</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-1.92625 -1.03646 0.472357 -6e-06 -7e-06 -4.7e-05</pose>
+          <pose frame=''>-1.9262 -0.003806 0.472351 -6e-06 -7e-06 -4.7e-05</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
