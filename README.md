@@ -34,3 +34,4 @@ gazebo建模方法（这里用的是iiwa的，本质就是搭建几个gazebo的k
 ![Screenshot from 2021-05-28 21-03-14](https://user-images.githubusercontent.com/18031767/120055094-778f2880-c066-11eb-93e6-b1b6ddb8037c.png)
 还有一个需要注意的是，gazebo建模里面，也就是world里面相机的link并不会发布，所以，这里需要额外发布link。所以，我们这边写了一个程序，专门将这些点云进行发布，同时进行拼接,下面蓝色部分即为点云部分:
 ![Screenshot from 2021-05-29 11-44-36](https://user-images.githubusercontent.com/18031767/120057130-60a30300-c073-11eb-8135-19975e18000b.png)
+(最近忙，这部分毕业后再写)
